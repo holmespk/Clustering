@@ -1,0 +1,75 @@
+Name : pavan kulkarni
+net-id : pxk142330
+
+This package consists of 2 folders
+
+a. part-a
+----------------------------------------
+1.KMeansClient.java - source code
+2.KMeansEucledian.java -source code
+3.Point.java -source code
+4.test_data.txt - datafile
+
+b. part-b
+----------------------------------------
+1.Tweets.java -source code
+2.KMeansJaccard.java -source code
+3.KmeansJaccardClient.java -source code
+4.Tweets.json -data file
+5.InitialSeeds.txt -initial centroids file
+6.json-20150729.jar -external dependencies
+7.clusterAllocation.txt - A file which contains the tweets aassigned to particular clusters.
+
+compiling and running instructions 
+---------------------------------------------
+
+* Unzip the folder "kulkarni_pxk142330"
+* "cd kulkarni_pxk142330"
+
+part-a
+------------------------------------------------------------------------------------------------------
+                                                                                                     |
+1. "cd part-a" .                                                                                     |
+2. type "javac *.java"  to compile the code .                                                        |
+3. type "java KMeansClient.java <no_of_clusters> <test_data.txt> <output.txt>" to run the program.   |
+   eg for k = 5 type "java KMeansClient 5 test_data.txt output.txt".                            |
+4. The SSE prints on the console .                                                                   |
+5. do "cat output.txt" to examine which points are assigned to which clusters.                       |
+------------------------------------------------------------------------------------------------------
+|results obtained for running for 5 different values of K |
+---------------------------------------------------------
+       |  k    |   SSE   |
+       -------------------
+       |  3    |  1.91   |
+       -------------------
+       |  4    |  1.69   |
+       -------------------
+       |  5    |  1.49   |
+       -------------------
+       |  6    |  1.18   |
+       -------------------
+       |  7    |  1.12   |
+       -------------------
+
+
+part-b
+--------------------------------------------------------------------------------------------------------------------------
+                                                                                                                         |
+1. cd part-b from parent directory (" kulkarni_pxk142330").                                                              |
+2. type "javac -cp json-20150729.jar *.java"  to compile the code.                                                       |
+3. type "java -cp json-20150729.jar:. KmeansJaccardClient 25 InitialSeeds.txt Tweets.json output.txt" to run the program |
+4. The SSE prints on the console.                                                                                        |
+5. do "cat output.txt" to examine which points are assigned to which clusters.                                           |
+--------------------------------------------------------------------------------------------------------------------------
+--------
+Result |
+--------
+       ----------------
+       |  k    | SSE  |
+       ----------------
+       | 25    | 24.59|
+       ----------------
+
+Note 1 : json-20150729.jar is a dependency and is included in the folder.
+
+
